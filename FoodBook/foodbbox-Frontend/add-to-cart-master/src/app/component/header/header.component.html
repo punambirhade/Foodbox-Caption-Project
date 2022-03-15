@@ -1,0 +1,32 @@
+<header>
+    <div class="navbar navbar-dark bg-dark">
+    
+        <div class="navbar-brand align-item-center d-flex">
+            <i style="font-size: 40px;" class="fas fa-shipping-fast">&nbsp;
+                
+            </i>
+            <strong style="font-size: 30px;" >FoodBox</strong>
+            <div class="form-group">
+                <input  *ngIf="!loginService.isUserLoggedIn()" type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search foods">
+               
+                <button *ngIf="!loginService.isUserLoggedIn()" class="fas fa-search search-icon"></button>
+            </div>
+         </div>
+
+        
+        <button *ngIf="!loginService.isUserLoggedIn()" routerLink="login" class="btn btn-primary">SignUp</button>
+        
+
+        <button *ngIf="!loginService.isUserLoggedIn()" routerLink="adminlogin" class="btn btn-primary"> Admin Login</button>
+        <button *ngIf="loginService.isUserLoggedIn()" routerLink="add-product" class="btn btn-primary"> Add Product</button>
+        <button style="margin-right: 300px;" *ngIf="loginService.isUserLoggedIn()" routerLink="product-list" class="btn btn-primary"> Actions </button>
+        <button style="margin-right: 200px;" *ngIf="loginService.isUserLoggedIn()" routerLink="login-status" class="btn btn-primary"> logout</button>
+      
+        <button *ngIf="!loginService.isUserLoggedIn()"  routerLink="cart" class="btn btn-primary">
+            <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+            <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+        </button>
+      <button *ngIf="!loginService.isUserLoggedIn()" routerLink="logout" class="btn btn-primary">LogOut</button>
+    </div>
+</header>
+

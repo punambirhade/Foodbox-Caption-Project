@@ -1,0 +1,61 @@
+.card-top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: .25rem;
+}
+
+.item img {
+    width: 64px;
+}
+li:hover {
+    cursor: pointer;
+}
+
+.item {
+    margin: 0px 15px;
+    text-align: center;
+}
+
+.item a:hover {
+    color: blue;
+}
+
+.card {
+    padding: 5px;
+    margin: 10px;
+}
+
+.card img {
+    width: 230px;
+    height: 200px;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.card img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+ select {
+    width: 50px;
+    text-transform: none;
+    display: inline-block;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+
+  .containerr{
+      display: inline;
+  }
