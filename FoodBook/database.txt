@@ -1,0 +1,77 @@
+CREATE TABLE `cuisine` (
+  `id` bigint(11) NOT NULL,
+  `cuisine_name` varchar(411) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cuisine`
+--
+
+INSERT INTO `cuisine` (`id`, `cuisine_name`) VALUES
+(1, 'Arab'),
+(2, 'Chinese'),
+(3, 'Persian'),
+(4, 'Indian'),
+(5, 'Italian');
+
+CREATE TABLE `product` (
+  `id` bigint(11) NOT NULL,
+  `name` varchar(111) NOT NULL,
+  `description` varchar(1000) DEFAULT NULL,
+  `price` decimal(55,0) DEFAULT NULL,
+  `image_url` varchar(500) DEFAULT NULL,
+  `date_created` datetime(6) DEFAULT NULL,
+  `last_updated` datetime(6) DEFAULT NULL,
+  `category` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `product` (`id`, `name`, `description`, `price`, `image_url`, `date_created`, `last_updated`, `category`) VALUES
+(1, 'Hummus', 'this is very testy dish', '20', 'https://img.theculturetrip.com/1440x/smart/wp-content/uploads/2017/07/hummus-1058001_1920.jpg', '2021-09-15 23:17:00.000000', '2021-09-13 23:17:03.000000', "Arab"),
+(2, 'Fattoush', 'This delicious bread salad ', '23', 'https://img.theculturetrip.com/1440x807/smart/wp-content/uploads/2017/07/starter-1872862_1920-e1501253889682.jpg', '2021-07-15 23:17:00.000000', '2021-09-06 08:52:35.000000',"Arab"),
+(3, 'Manakeesh', 'This is pizza ', '33', 'https://dynaimage.cdn.cnn.com/cnn/q_auto,w_602,c_fill,g_auto,h_339,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F170209174500-manakeesh.jpg', '2021-07-15 23:17:00.000000', '2021-07-13 23:17:03.000000',"Arab"),
+(4, 'Moutabal', 'this is Tasty', '12', 'https://dynaimage.cdn.cnn.com/cnn/q_auto,w_602,c_fill,g_auto,h_339,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F170209172813-baba-ganoush.jpg', '2021-07-15 23:17:00.000000', '2021-07-15 23:17:00.000000', "Arab"),
+(5, 'Umm ali', 'Egyptian bread pudding, or umm ali, is a hearty pastry cooked in milk and cream. ', '12', 'https://dynaimage.cdn.cnn.com/cnn/q_auto,w_602,c_fill,g_auto,h_339,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F170209174450-umm-ali.jpg', '2021-01-19 23:24:19.000000', '2021-05-19 23:24:19.000000',"Arab"),
+(6, 'Shanklish', 'This cow or sheep milk cheese pizza ', '31', 'https://dynaimage.cdn.cnn.com/cnn/q_auto,w_602,c_fill,g_auto,h_339,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F170209174456-shanklish.jpg', '2020-05-19 23:24:19.000000', '2021-05-19 23:24:19.000000', "Arab"),
+(7, 'Shish tawook', 'Served with pure garlic paste, this simple skewered chicken dish .', '44', 'https://dynaimage.cdn.cnn.com/cnn/q_auto,w_602,c_fill,g_auto,h_339,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F170209174452-shish-tawook.jpg', '2021-03-14 23:24:19.000000', '2021-05-19 23:24:19.000000',"Arab"),
+(8, 'Dolma', ' juicy vegetables.', '31', 'https://dynaimage.cdn.cnn.com/cnn/q_auto,w_602,c_fill,g_auto,h_339,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F170209172805-dolma.jpg', '2021-08-19 23:24:19.000000', '2021-05-19 23:24:19.000000',"Arab"),
+(9, 'Kofta', 'Sweet Dish.', '41', 'https://dynaimage.cdn.cnn.com/cnn/q_auto,w_602,c_fill,g_auto,h_339,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F170209172746-kofta.jpg', '2021-11-19 23:24:19.000000', '2021-05-19 23:24:19.000000', "Arab"),
+(10, 'Knafeh', 'This delicious cheesecake uses Nabusi cheese. The blush coloring comes from orange blossom water or rose water.', '31', 'https://dynaimage.cdn.cnn.com/cnn/q_auto,w_602,c_fill,g_auto,h_339,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F170209172748-knafeh.jpg', '2021-07-19 23:24:19.000000', '2021-05-19 23:24:19.000000',"Arab"),
+(11, 'Murgh Makhani', 'Diliciouse test', '54', 'https://www.thespruceeats.com/thmb/HkR_HR9fqAR3HaC9cYNwwE9diBo=/974x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/butter-chicken-479366-step-12-3536fe3a146d4f31abafaf571790e544.jpg', '2017-08-09 23:17:00.000000', '2021-08-12 23:17:00.000000',"Indian"),
+(12, 'Chole', 'In Northern India, classic and easy chole chickpea curry .', '42', 'https://www.thespruceeats.com/thmb/XfZ-PtUQPfhu9QdurxuNpaxndDQ=/1300x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/chole-chickpea-curry-1957946-hero-01-cddf957cc78d4032ba29ec2adbc05a97.jpg', '2018-08-18 23:17:00.000000', '2021-08-12 23:17:00.000000',"Indian"),
+(13, 'Tandoori Chicken', 'Although traditionally cooked in a clay oven', '52', 'https://www.thespruceeats.com/thmb/SxIRu8AgdaHqXYKo10Gc9D97D1g=/1643x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ChickenTandooriSpruce-f238bf7413984e088268565c5b660b11.jpg', '2019-05-07 23:24:19.000000', '2021-08-12 23:17:00.000000',"Indian"),
+(14, 'Chicken Vindaloo Curry', 'This is a mild and sweetly-spiced recipe for chicken vindaloo curry', '63', 'https://www.thespruceeats.com/thmb/F8XL5PEpY4vE38-MEe8LDuclmtw=/900x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/authentic-chicken-vindaloo-recipe-468712017-step-hero_1-57c6cc32841d4726b5f2eedd298b206d.jpg', '2021-08-12 23:17:00.000000', '2021-05-19 23:24:19.000000',"Italian"),
+(15, 'Lemon Rice', 'South Indian lemon rice .', '42', 'https://www.thespruceeats.com/thmb/MmwoX0JRUMSC3gv-aSXVvyX-PHE=/1729x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/south-indian-lemon-rice-1957723-hero-02-18047e2504ad42fa96817e047c075ac3.jpg', '2021-05-19 23:24:19.000000', '2021-05-19 23:24:19.000000',"Indian"),
+(16, 'Naan', 'Naan, a puffy flatbread.', '24', 'https://www.thespruceeats.com/thmb/6P7g2QY-3QHWs6a58LrJ2tbbw2w=/1391x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/naan-leavened-indian-flatbread-1957348-final-08-116a2e523f6e4ee693b1a9655784d9b9.jpg', '2021-05-02 23:24:19.000000', '2021-05-19 23:24:19.000000', "Indian"),
+(17, 'Malai Prawn', 'This Bengali speciality often appears alongside jeera rice.', '55', 'https://www.thespruceeats.com/thmb/lyFzDP7IniEpb1eW1E2lrzpcvYc=/1237x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/creamy-prawn-curry-1957454-hero-01-9e15ed0ddd334cf4a03533f0b72919b9.jpg', '2021-05-01 23:24:19.000000', '2021-05-19 23:24:19.000000', "Indian"),
+(18, 'Vegan Basmati Rice', ' all Indian feasts need basmati rice.', '44', 'https://www.thespruceeats.com/thmb/RLpF45cRVBDZAUzr83bTUg6L914=/1633x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/easy-vegan-indian-basmati-rice-recipe-3378479-hero-01-35f4f27d496c41fea81589a7dce17eb1.jpg', '2021-05-19 23:24:19.000000', '2021-05-19 23:24:19.000000', "Indian"),
+(19, 'Tamarind-Stuffed Fish', 'A luxurious whole fish preparation flavored with tangy tamarind and fragrant barberries', '88', 'https://www.saveur.com/uploads/2019/02/08/VWK5QXQXNQDRTGHQGR3PR32C6M.jpg', '2021-08-12 23:17:00.000000', '2021-08-12 23:17:00.000000',"Persian"),
+(20, 'Chelo ba Tahdig', 'Iranians usually serve chelo ba tahdig with stew, kebabs, or meat dishes', '63', 'https://www.saveur.com/uploads/2019/03/11/WSVNQHIRDDTVZHYCGAMFEB5ZCM-1024x768.jpg', '2017-07-02 23:17:00.000000', '2021-07-15 23:17:00.000000',"Persian"),
+(21, 'Kuku Sabzi', 'A classic Persian herb-loaded egg dish with the fragrant lift of rose petals', '53', 'https://www.saveur.com/uploads/2019/01/16/R2FL55HMXTZNKX7U75S4YEYS4U-1024x769.jpg', '2021-05-19 23:24:19.000000', '2021-05-19 23:24:19.000000',"Persian"),
+(22, 'Tahcheen-e Morgh', 'Bake this tahcheen, a saffron rice with chicken', '36', 'https://www.saveur.com/uploads/2019/03/11/SI4KF6ISWT2J7XCCEZRWOH7DFY-1024x768.jpg', '2021-08-12 23:17:00.000000', '2021-08-12 23:17:00.000000',"Persian"),
+(23, 'Adas Polo', 'A thin layer of lavash bread can be cooked beneath the rice to serve as a tahdig.', '63', 'https://www.saveur.com/uploads/2019/03/11/L2N233EB3VWQE43J7IJHYBS3Z4-1024x768.jpg', '2021-08-12 23:17:00.000000', '2021-08-12 23:17:00.000000',"Persian"),
+(24, 'Sichuan Pork', 'Sichuan Pork, actually, poached spicy slices of pork ', '68', 'https://images.chinahighlights.com/allpicture/2019/11/7b3afb974d7946bbbe397f7c_894x670.webp', '2021-07-15 23:17:00.000000', '2021-07-13 23:17:03.000000',"Chinese"),
+(25, 'Braised Pork Balls in Gravy', 'Braised pork balls in gravy .', '61', 'https://images.chinahighlights.com/allpicture/2019/11/a47d9323b7ae409ba96e628d_894x596.webp', '2022-07-29 23:17:00.000000', '2021-07-15 23:17:00.000000',"Chinese"),
+(26, 'Shrimp with Vermicelli and Garlic', 'Shrimp with vermicelli and garlic ', '14', 'https://images.chinahighlights.com/allpicture/2019/11/fd729ddd3fdf4fd9beefc79e_894x594.webp', '2021-05-19 23:24:19.000000', '2021-05-19 23:24:19.000000',"Chinese"),
+(27, 'Chow Mein', '\"Chow mein\" the Cantonese pronunciation of the Chinese characters abov', '28', 'https://images.chinahighlights.com/allpicture/2018/03/10725167158a4b8589bf3140_894x596.webp', '2021-08-15 23:17:00.000000', '2021-05-19 23:24:19.000000',"Chinese"),
+(28, 'Sweet and Sour Pork', 'Sweet and sour pork ', '68', 'https://images.chinahighlights.com/allpicture/2019/11/a4ad4a7fe0cb401cb0be6383_894x598.webp', '2021-05-25 23:24:19.000000', '2021-05-19 23:24:19.000000',"Chinese"),
+(29, 'Pizza', 'Though a slab of flat bread served with oil and spices ', '25', 'https://www.walksofitaly.com/blog/wp-content/uploads/2011/05/DSC_0195-768x510.jpg', '2014-07-05 23:17:00.000000', '2021-07-15 23:17:00.000000',"Italian"),
+(30, 'Lasagna', 'Lasagna is a wide, flat pasta noodle, usually baked in layers in the oven.', '86', 'https://www.walksofitaly.com/blog/wp-content/uploads/2016/07/11735294004_b68f0ab3ef_k-768x512.jpg', '2017-05-10 23:24:19.000000', '2021-05-19 23:24:19.000000',"Italian"),
+(31, 'Ossobuco', 'The world-famous ossobuco .', '73', 'https://www.walksofitaly.com/blog/wp-content/uploads/2014/05/Osso-Buco-768x515.jpg', '2021-08-24 23:17:00.000000', '2021-05-19 23:24:19.000000', "Italian"),
+(32, 'Polpette', 'Polpette can be made of meat, fish, potatoes, rice or vegetables and can be prepared stewed, baked or fried.', '63', 'http://yourguidetoitaly.com/slowitaly/wp-content/uploads/2018/03/polpette-c.jpg', '2021-07-15 23:17:00.000000', '2021-07-12 23:17:03.000000',"Italian");
+
+
+CREATE TABLE `users` (
+  `id` bigint(11) NOT NULL,
+  `type` int(11) NOT NULL DEFAULT 0,
+  `username` varchar(111) NOT NULL,
+  `email` varchar(111) NOT NULL,
+  `password` varchar(111) NOT NULL,
+  `phone` int(22) DEFAULT NULL,
+  `street` varchar(50) DEFAULT NULL,
+  `city` varchar(50) DEFAULT NULL,
+  `zipcode` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+
